@@ -1,0 +1,10 @@
+<h1 class="todo_list_title">Éditer <%= @todo_list.title %></h1>
+
+<%= render "form", todo_list: @todo_list %>
+
+<br>
+
+<div>
+  <%= link_to "Afficher la To-Do Liste", @todo_list %> |
+  <%= link_to "Retour à l'accueil", todo_lists_path %>
+</div>

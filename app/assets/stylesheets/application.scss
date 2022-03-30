@@ -1,0 +1,198 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$white: rgba(250, 250, 250, .3);
+$green: #1F7972;
+$dark: #000000;
+$pink: #FFA9BF;
+$purple: #8483FF;
+
+* {
+	box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body{
+  background: -webkit-linear-gradient(40deg, $pink 10%, $purple 100%);
+  background: -moz-linear-gradient(40deg, #FFA9BF 10%, #8483FF 100%);
+  background: -ms-linear-gradient(40deg, #FFA9BF 10%, #8483FF 100%);
+  background: -o-linear-gradient(40deg, #FFA9BF 10%, #8483FF 100%);
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#notice{
+  text-align: center;
+  color: $green;
+  font-weight: 700;
+}
+
+.clearfix{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2em;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.container{
+  width: 50%;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 2em;
+  margin: 3em auto 0 auto;
+  box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
+}
+
+h1{
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 2em;
+  text-transform: uppercase;
+}
+
+
+.todo_list_title{
+  font-size: 2rem;
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.todo_list_sub_title{
+  padding-bottom: 3em;
+}
+
+#todo_items_wrapper{
+  .row{
+    width: 100%;
+    border-top: 1px solid $dark;
+    border-bottom: 1px solid $dark;
+
+    .complete{
+      width: 10%;
+      float: left;
+      text-align: center;
+      border-right: 1px solid $dark;
+      padding: 1em 0;
+    }
+
+    .todo_item{
+      width: 80%;
+      float: left;
+
+      p{
+        margin: 0;
+        padding: 1em;
+        color: $dark;
+        font-weight: 100;
+      }
+    }
+
+    .trash{
+      width: 10%;
+      float: left;
+      text-align: center;
+      border-left: 1px solid $dark;
+      padding: 1em 0;
+    }
+  }
+
+  #form{
+    margin-top: 2em;
+    padding: 0 5%;
+
+    input[type="text"]{
+      width: 72%;
+      display: inline-block;
+      outline: none;
+      background: $white;
+      border: none;
+      height: 40px;
+      border-radius: 4px;
+      padding: 1em 2em;
+    }
+
+    input[type="submit"]{
+      background: $pink;
+      color: white;
+      outline: none;
+      border: none;
+      height: 40px;
+      border-radius: 4px;
+      width: 25%;
+      display: inline-block;
+      transition: all .4s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        background: $purple;
+      }
+    }
+  }
+}
+
+.links{
+  display: block;
+  margin: 2em auto 0 auto;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  a {
+    color: white;
+    transition: all .4s ease-in-out;
+    &:hover {
+      color: $purple;
+    }
+  }
+}
+
+.forms{
+  padding: 0 5%
+}
+
+input[type="text"], textarea{
+  width: 100%;
+  margin: 1em 2% 1em 0;
+  display: inline-block;
+  outline: none;
+  background: $white;
+  border: none;
+  height: 40px;
+  padding: 1em 1em;
+}
+
+textarea{
+  height: 200px;
+}
+
+input[type="submit"]{
+  margin: 1em auto 0 auto;
+  background: $pink;
+  color: white;
+  outline: none;
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  width: 25%;
+  display: inline-block;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  &:hover{
+    background: $purple;
+  }
+}
