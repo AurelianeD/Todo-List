@@ -14,8 +14,10 @@
 </div>
 
 <div class="links">
+
+  <%= button_to "Supprimer cette To-Do liste", @todo_list, method: :delete,
+  data: {confirm: "Supprimer cette to-do liste ?"} %>
   <%= link_to "Éditer cette To-Do liste", edit_todo_list_path(@todo_list) %> |
   <%= link_to "Retour à l'accueil", todo_lists_path %>
 
-  <%= button_to "Supprimer cette To-Do liste", @todo_list, method: :delete %>
 </div>
