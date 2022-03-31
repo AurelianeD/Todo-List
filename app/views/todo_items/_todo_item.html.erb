@@ -6,6 +6,7 @@
     </div>
 
     <div class="complete">
+
         <i style="opacity: 0.4;" class="fa fa-check"></i>
     </div>
 
@@ -21,8 +22,8 @@
       <p><%= todo_item.content %></p>
     </div>
 
-    <div class="complete" style="background: transparent;">
-      <%= button_to complete_todo_list_todo_item_path(@todo_list, todo_item.id),
+    <div class="complete">
+      <%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item.id),
       method: :patch do %>
         <i class="fa fa-circle-thin"></i>
       <% end %>

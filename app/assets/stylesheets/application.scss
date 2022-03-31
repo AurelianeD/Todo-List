@@ -46,6 +46,7 @@ body{
 }
 ::placeholder {
   font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.5;
 }
 
 #notice{
@@ -54,14 +55,29 @@ body{
   font-weight: 700;
 }
 
+.container{
+  width: 50%;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 2em;
+  margin: 3em auto 0 auto;
+  box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
+}
+
+h1{
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: $purple;
+  margin-bottom: 1.5em;
+}
+
 p{
   color: $dark;
 }
 
 .clearfix{
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 2em;
     align-items: center;
 }
 
@@ -82,22 +98,7 @@ p{
     }
   }
 }
-.container{
-  width: 50%;
-  background-color: $white;
-  border-radius: 10px;
-  padding: 2em;
-  margin: 3em auto 0 auto;
-  box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
-}
 
-h1{
-  font-size: 3rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: $purple;
-  margin-bottom: 1.5em;
-}
 
 
 .todo_list_title{
@@ -111,24 +112,25 @@ h1{
   padding-bottom: 3em;
   font-size: 1.5rem;
   color: $dark;
+  line-height: 1.5em;
 }
 
 #todo_items_wrapper{
   .row{
     width: 100%;
-    border-top: 1px solid $dark;
-    border-bottom: 1px solid $dark;
+    border-top: 1px solid white;
+    margin: 0;
 
     .complete{
       width: 10%;
       float: left;
       text-align: center;
-      border-right: 1px solid $dark;
+      border-right: 1px solid white;
       padding: 1em 0;
     }
 
     .todo_item{
-      width: 80%;
+      width: 60%;
       float: left;
 
       p{
@@ -140,11 +142,10 @@ h1{
     }
 
     .trash{
-      width: 10%;
+      width: 30%;
       float: left;
       text-align: center;
-      border-left: 1px solid $dark;
-      padding: 1em 1em;
+      padding: 0 1em;
     }
   }
 
@@ -182,6 +183,10 @@ h1{
     }
   }
 
+  button[type="submit"]{
+    margin-bottom: 3em;
+  }
+
 
 }
 
@@ -206,7 +211,6 @@ textarea{
 
 input[type="submit"], button[type="submit"]{
   padding: 0 2em;
-  margin-bottom: 3em;
   background: $pink;
   color: white;
   outline: none;

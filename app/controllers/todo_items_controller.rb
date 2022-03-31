@@ -10,16 +10,16 @@ class TodoItemsController < ApplicationController
   def destroy
     @todo_item = @todo_list.todo_items.find(params[:id])
     if @todo_item.destroy
-     flash[:success] = "La tâche à bien été supprimé de la To-Do List."
+     flash[:success] = "✅ La tâche a bien été supprimé de la To-Do Liste."
     else
-     flash[:error] = "La tâche n'a pas pu être supprimé de la To-Do List."
+     flash[:error] = "❌ La tâche n'a pas pu être supprimé de la To-Do Liste."
     end
     redirect_to @todo_list
   end
 
   def complete
     @todo_item.update_attribute(:completed_at, Time.now)
-    redirect_to @todo_list, notice: "La tâche est terminée !"
+    redirect_to @todo_list, notice: "👏 La tâche est terminée !"
   end
 
   private

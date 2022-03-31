@@ -1,4 +1,4 @@
 <%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
-  <%= f.text_field :content, placeholder: "Ex: Laver les vitres" %>
-  <%= f.submit %>
+  <%= f.text_field :content, placeholder: "Liste tes tâches afin de t'organiser plus facilement !" %>
+  <%= f.submit "Ajouter"%>
  <% end %>
