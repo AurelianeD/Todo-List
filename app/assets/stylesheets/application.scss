@@ -109,7 +109,20 @@ h1{
       float: left;
       text-align: center;
       border-left: 1px solid $dark;
-      padding: 1em 0;
+      padding: 1em 1em;
+
+      button[type="submit"]{
+        background-color: $pink;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        transition: all .4s ease-in-out;
+        cursor: pointer;
+        &:hover{
+          background-color: $purple;
+          box-shadow: 5px 5px 5px $white;
+        }
+      }
     }
   }
 
