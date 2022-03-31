@@ -32,7 +32,20 @@ body{
   background: -moz-linear-gradient(40deg, #FFA9BF 10%, #8483FF 100%);
   background: -ms-linear-gradient(40deg, #FFA9BF 10%, #8483FF 100%);
   background: -o-linear-gradient(40deg, #FFA9BF 10%, #8483FF 100%);
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-input-placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+}
+::-moz-placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+}
+:-ms-input-placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+}
+::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #notice{
@@ -91,11 +104,13 @@ h1{
   font-size: 3rem;
   margin: 0;
   padding-bottom: 1em;
+  color: $dark;
 }
 
 .todo_list_sub_title{
   padding-bottom: 3em;
   font-size: 1.5rem;
+  color: $dark;
 }
 
 #todo_items_wrapper{
