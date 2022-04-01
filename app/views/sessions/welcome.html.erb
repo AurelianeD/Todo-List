@@ -1,0 +1,11 @@
+<h1>👋 Hello !</h1>
+
+<% if logged_in? %>
+    <h1><%= current_user.username %></h1>
+<%end%>
+
+<h2>Première fois ici ?</h2>
+<%= button_to "Je m'inscris", '/users/new', method: :get%>
+
+<p>Tu connais la suite 😉</p>
+<%= button_to "Je me connecte", '/login', method: :get%>

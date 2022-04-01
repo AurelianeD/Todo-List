@@ -1,11 +1,16 @@
+<% if logged_in? %>
+    <h1>👋 Hello <%= current_user.username %>!</h1>
+<%end%>
+
 <h1>🎯 Mes To-Do's</h1>
 
 <% @todo_lists.each do |todo_list| %>
 
-<div class="index_row">
-  <h2>▶️ <%= link_to todo_list.title, todo_list %></h2>
-  <p><%= todo_list.description %></p>
-</div>
+  <div class="index_row">
+    <h2>▶️ <%= link_to todo_list.title, todo_list %></h2>
+    <p><%= todo_list.description %></p>
+  </div>
+
 <% end %>
 
 <div class="links">
