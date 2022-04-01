@@ -11758,3 +11758,238 @@ Processing by TodoListsController#index as HTML
 Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 3295)
 
 
+Started GET "/todo_lists" for ::1 at 2022-04-01 10:29:53 +0200
+Processing by TodoListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.1ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.erb:3
+  Rendered todo_lists/index.html.erb within layouts/application (Duration: 72.6ms | Allocations: 3086)
+  Rendered layout layouts/application.html.erb (Duration: 110.3ms | Allocations: 7543)
+Completed 200 OK in 115ms (Views: 112.1ms | ActiveRecord: 24.3ms | Allocations: 7821)
+
+
+Started GET "/todo_lists/7" for ::1 at 2022-04-01 10:29:58 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:64:in `set_todo_list'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/_todo_list.html.erb (Duration: 0.8ms | Allocations: 284)
+  [1m[36mTodoItem Load (0.5ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.erb:10
+  Rendered collection of todo_items/_todo_item.html.erb [5 times] (Duration: 2.7ms | Allocations: 1619)
+  Rendered todo_items/_form.html.erb (Duration: 1.4ms | Allocations: 642)
+  Rendered todo_lists/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 4745)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 6783)
+Completed 200 OK in 26ms (Views: 13.8ms | ActiveRecord: 7.0ms | Allocations: 7706)
+
+
+Started GET "/todo_lists/7" for ::1 at 2022-04-01 10:30:28 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:64:in `set_todo_list'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/_todo_list.html.erb (Duration: 0.3ms | Allocations: 27)
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.erb:10
+  Rendered collection of todo_items/_todo_item.html.erb [5 times] (Duration: 2.3ms | Allocations: 1037)
+  Rendered todo_items/_form.html.erb (Duration: 11.4ms | Allocations: 344)
+  Rendered todo_lists/show.html.erb within layouts/application (Duration: 22.0ms | Allocations: 2924)
+  Rendered layout layouts/application.html.erb (Duration: 66.3ms | Allocations: 6972)
+Completed 200 OK in 79ms (Views: 66.8ms | ActiveRecord: 0.9ms | Allocations: 7756)
+
+
+Started GET "/todo_lists/7" for ::1 at 2022-04-01 10:31:51 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:64:in `set_todo_list'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/_todo_list.html.erb (Duration: 0.3ms | Allocations: 27)
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.erb:10
+  Rendered collection of todo_items/_todo_item.html.erb [5 times] (Duration: 25.6ms | Allocations: 1037)
+  Rendered todo_items/_form.html.erb (Duration: 2.8ms | Allocations: 346)
+  Rendered todo_lists/show.html.erb within layouts/application (Duration: 49.0ms | Allocations: 2875)
+  Rendered layout layouts/application.html.erb (Duration: 79.2ms | Allocations: 6938)
+Completed 200 OK in 94ms (Views: 80.0ms | ActiveRecord: 1.4ms | Allocations: 7722)
+
+
+Started GET "/todo_lists/7" for ::1 at 2022-04-01 10:33:10 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.8ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:64:in `set_todo_list'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/_todo_list.html.erb (Duration: 0.3ms | Allocations: 27)
+  [1m[36mTodoItem Load (0.7ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.erb:10
+  Rendered collection of todo_items/_todo_item.html.erb [5 times] (Duration: 14.4ms | Allocations: 1037)
+  Rendered todo_items/_form.html.erb (Duration: 3.4ms | Allocations: 344)
+  Rendered todo_lists/show.html.erb within layouts/application (Duration: 29.7ms | Allocations: 2867)
+  Rendered layout layouts/application.html.erb (Duration: 56.3ms | Allocations: 6921)
+Completed 200 OK in 76ms (Views: 57.6ms | ActiveRecord: 1.5ms | Allocations: 7705)
+
+
+Started GET "/todo_lists/7" for ::1 at 2022-04-01 10:34:27 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:64:in `set_todo_list'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/_todo_list.html.erb (Duration: 0.3ms | Allocations: 27)
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.erb:10
+  Rendered collection of todo_items/_todo_item.html.erb [5 times] (Duration: 15.1ms | Allocations: 1037)
+  Rendered todo_items/_form.html.erb (Duration: 4.5ms | Allocations: 344)
+  Rendered todo_lists/show.html.erb within layouts/application (Duration: 26.8ms | Allocations: 2870)
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | Allocations: 6929)
+Completed 200 OK in 66ms (Views: 60.1ms | ActiveRecord: 0.9ms | Allocations: 7713)
+
+
+Started GET "/todo_lists/7" for ::1 at 2022-04-01 10:46:01 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:64:in `set_todo_list'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/_todo_list.html.erb (Duration: 0.2ms | Allocations: 27)
+  [1m[36mTodoItem Load (0.5ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.erb:10
+  Rendered collection of todo_items/_todo_item.html.erb [5 times] (Duration: 3.4ms | Allocations: 1037)
+  Rendered todo_items/_form.html.erb (Duration: 1.6ms | Allocations: 344)
+  Rendered todo_lists/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2884)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 6938)
+Completed 200 OK in 115ms (Views: 38.8ms | ActiveRecord: 18.0ms | Allocations: 10003)
+
+
+Started GET "/todo_lists/7" for ::1 at 2022-04-01 10:46:38 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.9ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:64:in `set_todo_list'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/_todo_list.html.erb (Duration: 0.3ms | Allocations: 27)
+  [1m[36mTodoItem Load (1.4ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.erb:10
+  Rendered collection of todo_items/_todo_item.html.erb [5 times] (Duration: 2.9ms | Allocations: 1037)
+  Rendered todo_items/_form.html.erb (Duration: 1.7ms | Allocations: 344)
+  Rendered todo_lists/show.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2870)
+  Rendered layout layouts/application.html.erb (Duration: 68.0ms | Allocations: 6918)
+Completed 200 OK in 79ms (Views: 67.6ms | ActiveRecord: 2.3ms | Allocations: 7702)
+
+
+Started POST "/todo_lists/7/todo_items" for ::1 at 2022-04-01 10:46:53 +0200
+Processing by TodoItemsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "todo_item"=>{"content"=>"yeaaaaaah"}, "commit"=>"Ajouter", "todo_list_id"=>"7"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:28:in `set_todo_list'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:6:in `create'
+  [1m[36mTodoItem Create (26.2ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "yeaaaaaah"], ["todo_list_id", 7], ["created_at", "2022-04-01 08:46:53.510711"], ["updated_at", "2022-04-01 08:46:53.510711"], ["completed_at", nil]]
+  ↳ app/controllers/todo_items_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:6:in `create'
+Redirected to http://localhost:3000/todo_lists/7
+Completed 302 Found in 56ms (ActiveRecord: 29.6ms | Allocations: 3251)
+
+
+Started GET "/todo_lists/7" for ::1 at 2022-04-01 10:46:53 +0200
+Processing by TodoListsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:64:in `set_todo_list'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/_todo_list.html.erb (Duration: 0.1ms | Allocations: 27)
+  [1m[36mTodoItem Load (0.7ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.erb:10
+  Rendered collection of todo_items/_todo_item.html.erb [6 times] (Duration: 2.5ms | Allocations: 1292)
+  Rendered todo_items/_form.html.erb (Duration: 0.6ms | Allocations: 344)
+  Rendered todo_lists/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3210)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5256)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 1.1ms | Allocations: 6090)
+
+
+Started PATCH "/todo_lists/7/todo_items/33/complete" for ::1 at 2022-04-01 10:46:57 +0200
+Processing by TodoItemsController#complete as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "todo_list_id"=>"7", "id"=>"33"}
+  [1m[36mTodoList Load (0.6ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:28:in `set_todo_list'
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 7], ["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:32:in `set_todo_item'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:21:in `complete'
+  [1m[36mTodoItem Update (2.5ms)[0m  [1m[33mUPDATE "todo_items" SET "updated_at" = $1, "completed_at" = $2 WHERE "todo_items"."id" = $3[0m  [["updated_at", "2022-04-01 08:46:57.323241"], ["completed_at", "2022-04-01 08:46:57.322781"], ["id", 33]]
+  ↳ app/controllers/todo_items_controller.rb:21:in `complete'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:21:in `complete'
+Redirected to http://localhost:3000/todo_lists/7
+Completed 302 Found in 18ms (ActiveRecord: 3.8ms | Allocations: 3567)
+
+
+Started GET "/todo_lists/7" for ::1 at 2022-04-01 10:46:57 +0200
+Processing by TodoListsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:64:in `set_todo_list'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/_todo_list.html.erb (Duration: 0.1ms | Allocations: 27)
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.erb:10
+  Rendered collection of todo_items/_todo_item.html.erb [6 times] (Duration: 1.9ms | Allocations: 1186)
+  Rendered todo_items/_form.html.erb (Duration: 0.6ms | Allocations: 344)
+  Rendered todo_lists/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3088)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5135)
+Completed 200 OK in 18ms (Views: 7.8ms | ActiveRecord: 0.6ms | Allocations: 5926)
+
+
+Started GET "/todo_lists" for ::1 at 2022-04-01 10:46:59 +0200
+Processing by TodoListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.erb:3
+  Rendered todo_lists/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 704)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3005)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 3288)
+
+
+Started GET "/todo_lists" for ::1 at 2022-04-01 10:47:19 +0200
+Processing by TodoListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (4.1ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.erb:3
+  Rendered todo_lists/index.html.erb within layouts/application (Duration: 30.2ms | Allocations: 704)
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | Allocations: 5027)
+Completed 200 OK in 75ms (Views: 68.5ms | ActiveRecord: 4.1ms | Allocations: 5307)
+
+
+Started GET "/todo_lists/7" for ::1 at 2022-04-01 10:47:22 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.6ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:64:in `set_todo_list'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/_todo_list.html.erb (Duration: 0.2ms | Allocations: 27)
+  [1m[36mTodoItem Load (0.6ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.erb:10
+  Rendered collection of todo_items/_todo_item.html.erb [6 times] (Duration: 3.1ms | Allocations: 1186)
+  Rendered todo_items/_form.html.erb (Duration: 1.2ms | Allocations: 344)
+  Rendered todo_lists/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 3080)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 5124)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 1.2ms | Allocations: 5912)
+
+
