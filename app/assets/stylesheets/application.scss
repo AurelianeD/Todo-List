@@ -23,7 +23,7 @@ $purple: #8483FF;
 * {
 	box-sizing: border-box;
 }
-html {
+html, body {
   height: 100%;
 }
 
@@ -33,6 +33,9 @@ body{
   background: -ms-linear-gradient(40deg, #FFA9BF 10%, #8483FF 100%);
   background: -o-linear-gradient(40deg, #FFA9BF 10%, #8483FF 100%);
   font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  display: flex;
+  flex-direction: column;
 }
 
 ::-webkit-input-placeholder {
@@ -57,11 +60,13 @@ body{
 
 .container{
   width: 50%;
+  height: fit-content;
   background-color: $white;
   border-radius: 10px;
   padding: 2em;
   margin: 3em auto 0 auto;
   box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
+  flex: 1 0 auto;
 }
 
 h1{
@@ -105,7 +110,8 @@ p{
   font-size: 3rem;
   margin: 0;
   padding-bottom: 1em;
-  color: $dark;
+  color: white;
+  text-align: center;
 }
 
 .todo_list_sub_title{
@@ -203,6 +209,7 @@ input[type="text"], textarea{
   border: none;
   height: 40px;
   padding: 1em 1em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 textarea{
@@ -232,4 +239,25 @@ input[type="submit"], button[type="submit"]{
   margin-top: 1em;
   display: flex;
   justify-content: center;
+}
+
+footer{
+  background-color: $white;
+  margin-top: 3em;
+  padding: 1em;
+  flex-shrink: 0;
+  text-align: center;
+
+  p{
+    color: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    transition: all .4 ease-in-out;
+    &:hover{
+      color: $purple;
+    }
+  }
 }
