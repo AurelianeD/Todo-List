@@ -11,8 +11,13 @@ class SessionsController < ApplicationController
        session[:user_id] = @user.id
        redirect_to '/index'
     else
-       redirect_to '/login'
+       redirect_to '/welcome'
     end
+  end
+
+  def destroy
+    session.delete(:user_id)
+    redirect_to login_path, notice: "Vous avez bien été déconnecté"
   end
 
   def welcome
@@ -23,4 +28,7 @@ class SessionsController < ApplicationController
 
   def page_required_login
   end
+
+
+
 end

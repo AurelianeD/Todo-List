@@ -14,5 +14,6 @@
 <% end %>
 
 <div class="links">
-  <%= link_to "✚ Ajouter une nouvelle To-Do liste", new_todo_list_path %>
+  <%= link_to "✚ Ajouter une nouvelle To-Do liste", new_todo_list_path %> |
+  <%= button_to "Me déconnecter", logout_path, method: :delete %>
 </div>
