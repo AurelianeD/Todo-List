@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete(:user_id)
-    redirect_to login_path, notice: "Vous avez bien été déconnecté"
+    redirect_to '/welcome', notice: "Vous avez bien été déconnecté"
   end
 
   def welcome

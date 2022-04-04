@@ -13965,3 +13965,74 @@ Processing by SessionsController#new as TURBO_STREAM
 Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2831)
 
 
+Started GET "/" for ::1 at 2022-04-04 18:22:50 +0200
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 13968)
+Completed 200 OK in 22ms (Views: 21.3ms | Allocations: 14984)
+
+
+Started GET "/" for ::1 at 2022-04-04 18:22:55 +0200
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.9ms | Allocations: 360)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2406)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 2687)
+
+
+Started GET "/login" for ::1 at 2022-04-04 18:22:56 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 523)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2569)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 2836)
+
+
+Started POST "/login" for ::1 at 2022-04-04 18:23:00 +0200
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"doudou", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "doudou"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/index
+Completed 302 Found in 496ms (ActiveRecord: 33.9ms | Allocations: 5726)
+
+
+Started GET "/index" for ::1 at 2022-04-04 18:23:00 +0200
+Processing by TodoListsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTodoList Load (3.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.erb:7
+  Rendered todo_lists/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3128)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 5365)
+Completed 200 OK in 17ms (Views: 7.5ms | ActiveRecord: 3.6ms | Allocations: 9338)
+
+
+Started DELETE "/logout" for ::1 at 2022-04-04 18:23:03 +0200
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1056)
+
+
+Started GET "/welcome" for ::1 at 2022-04-04 18:23:03 +0200
+Processing by SessionsController#welcome as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.5ms | Allocations: 361)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2407)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2697)
+
+
