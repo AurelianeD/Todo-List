@@ -14036,3 +14036,186 @@ Processing by SessionsController#welcome as TURBO_STREAM
 Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2697)
 
 
+Started GET "/" for ::1 at 2022-04-04 18:27:30 +0200
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 3.8ms | Allocations: 804)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3387)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 4547)
+
+
+Started GET "/login" for ::1 at 2022-04-04 18:27:32 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3015)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 3357)
+
+
+Started GET "/welcome" for ::1 at 2022-04-04 18:29:26 +0200
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 2.0ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 2379)
+Completed 200 OK in 28ms (Views: 14.8ms | Allocations: 2646)
+
+
+Started GET "/welcome" for ::1 at 2022-04-04 18:32:38 +0200
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 3.0ms | Allocations: 812)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3395)
+Completed 200 OK in 16ms (Views: 13.6ms | Allocations: 4527)
+
+
+Started GET "/login" for ::1 at 2022-04-04 18:32:40 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1267)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1356)
+Completed 500 Internal Server Error in 6ms (Allocations: 1692)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>▶️ Me connecter</h1>
+
+  <%= form_tag '/login' do %>
+   <%= label_tag :username, 'Pseudo'%>
+   <%= text_field_tag :username%>
+   <%= label_tag :password, 'Mot de passe'%>
+   <%= password_field_tag :password%>
+
+   <%= submit_tag "Login", :class : "column" %>
+  <%end%>
+
+<div class="links">
+  <%= link_to "◀️ Retour à l'accueil", welcome_path %>
+</div>
+
+):
+1:    <h1>▶️ Me connecter</h1>
+2:    
+3:      <%= form_tag '/login' do %>
+4:       <%= label_tag :username, 'Pseudo'%>
+5:       <%= text_field_tag :username%>
+6:       <%= label_tag :password, 'Mot de passe'%>
+7:       <%= password_field_tag :password%>
+8:    
+9:       <%= submit_tag "Login", :class : "column" %>
+10:      <%end%>
+11:    
+12:    <div class="links">
+13:      <%= link_to "◀️ Retour à l'accueil", welcome_path %>
+14:    </div>
+  
+app/views/sessions/new.html.erb:9: syntax error, unexpected ':', expecting ')'
+app/views/sessions/new.html.erb:9: syntax error, unexpected ':', expecting ')'
+app/views/sessions/new.html.erb:9: syntax error, unexpected ':', expecting ')'
+app/views/sessions/new.html.erb:9: syntax error, unexpected ':', expecting ')'
+app/views/sessions/new.html.erb:9: syntax error, unexpected ':', expecting ')'
+app/views/sessions/new.html.erb:9: syntax error, unexpected ':', expecting ')'
+Started GET "/welcome" for ::1 at 2022-04-04 18:32:50 +0200
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 3.8ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3387)
+Completed 200 OK in 25ms (Views: 21.0ms | Allocations: 4519)
+
+
+Started GET "/login" for ::1 at 2022-04-04 18:32:52 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3011)
+Completed 200 OK in 10ms (Views: 8.8ms | Allocations: 3350)
+
+
+Started GET "/login" for ::1 at 2022-04-04 18:34:01 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1083)
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 3653)
+Completed 200 OK in 44ms (Views: 41.1ms | Allocations: 4786)
+
+
+Started GET "/login" for ::1 at 2022-04-04 18:34:16 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1100)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 3679)
+Completed 200 OK in 37ms (Views: 33.9ms | Allocations: 4831)
+
+
+Started GET "/login" for ::1 at 2022-04-04 18:36:07 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1121)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3689)
+Completed 200 OK in 19ms (Views: 15.2ms | Allocations: 4842)
+
+
+Started GET "/login" for ::1 at 2022-04-04 18:36:40 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1117)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3685)
+Completed 200 OK in 13ms (Views: 11.0ms | Allocations: 4836)
+
+
+Started GET "/" for ::1 at 2022-04-08 09:18:32 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1279)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 36063)
+Completed 200 OK in 45ms (Views: 39.8ms | ActiveRecord: 0.0ms | Allocations: 42155)
+
+
+Started GET "/" for ::1 at 2022-04-08 09:35:58 +0200
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 2.1ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3383)
+Completed 200 OK in 15ms (Views: 12.5ms | Allocations: 4576)
+
+
+Started GET "/" for ::1 at 2022-04-08 09:36:34 +0200
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 2.6ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3374)
+Completed 200 OK in 18ms (Views: 15.4ms | Allocations: 4524)
+
+
+Started GET "/" for ::1 at 2022-04-08 09:36:36 +0200
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.8ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2387)
+Completed 200 OK in 10ms (Views: 8.7ms | Allocations: 2672)
+
+
+Started GET "/" for ::1 at 2022-04-08 09:37:51 +0200
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 6.5ms | Allocations: 800)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 3385)
+Completed 200 OK in 27ms (Views: 25.5ms | Allocations: 4531)
+
+

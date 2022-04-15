@@ -5,11 +5,12 @@
 <% end %>
 
 <h1>👋 Hello !</h1>
+<h2>To-Day permet d'organiser tes journées efficassement !</h2>
 
 <div class="column">
-  <h2>Première fois ici ?</h2>
+  <p>Première fois ici ?</p>
   <%= button_to "Je m'inscris", '/users/new', method: :get%>
 
-  <p>Tu connais la suite 😉</p>
+  <p>Déjà un compte ?</p>
   <%= button_to "Je me connecte", '/login', method: :get%>
 </div>
