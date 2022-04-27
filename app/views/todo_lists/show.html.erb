@@ -1,0 +1,24 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <p id="notice"><%= msg %></p>
+  </div>
+<% end %>
+
+<%= render @todo_list %>
+
+<div id="todo_items_wrapper">
+ <%= render @todo_list.todo_items %>
+ <div id="form">
+  <%= render "todo_items/form" %>
+ </div>
+</div>
+
+<div class="links">
+
+  <%= button_to "Supprimer cette To-Do liste", @todo_list, method: :delete,
+  data: {confirm: "Supprimer cette to-do liste ?"} %>
+  <%= link_to "Éditer cette To-Do liste", edit_todo_list_path(@todo_list) %> |
+
+  <%= link_to "Retour à l'accueil", todo_lists_path %>
+
+</div>

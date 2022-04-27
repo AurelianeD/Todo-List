@@ -1,0 +1,9 @@
+<h1>Éditer <%= @todo_list.title %></h1>
+
+<%= render "form", todo_list: @todo_list %>
+
+<br>
+
+<div class="links">
+  <%= link_to "Annuler les modifications", todo_lists_path %>
+</div>

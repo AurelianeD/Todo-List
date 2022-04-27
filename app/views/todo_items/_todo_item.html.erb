@@ -1,0 +1,39 @@
+<div class="row clearfix">
+  <%if todo_item.completed_at? %>
+
+    <div class="todo_item">
+      <p style="opacity: 0.4;"><strike><%= todo_item.content %></strike></p>
+    </div>
+
+    <div class="complete">
+
+        <i style="opacity: 0.4;" class="fa fa-check"></i>
+    </div>
+
+    <div class="trash">
+      <%= button_to "Supprimer la tâche", todo_list_todo_item_path(@todo_list, todo_item.id),
+  method: :delete,
+  data: { confirm: "Êtes-vous sur de vouloir supprimer cette tâche de la To Do List ?" } %>
+    </div>
+
+  <% else %>
+
+    <div class="todo_item">
+      <p><%= todo_item.content %></p>
+    </div>
+
+    <div class="complete">
+      <%= button_to complete_todo_list_todo_item_path(@todo_list, todo_item.id),
+      method: :patch do %>
+        <i class="fa fa-circle-thin"></i>
+      <% end %>
+    </div>
+
+    <div class="trash">
+      <%= button_to "Supprimer la tâche", todo_list_todo_item_path(@todo_list, todo_item.id),
+  method: :delete,
+  data: { confirm: "Êtes-vous sur de vouloir supprimer cette tâche de la To Do List ?" } %>
+    </div>
+
+  <% end %>
+</div>

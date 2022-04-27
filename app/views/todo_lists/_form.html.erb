@@ -1,0 +1,27 @@
+<%= form_with(model: todo_list) do |form| %>
+  <% if todo_list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(todo_list.errors.count, "error") %> prohibited this todo_list from being saved:</h2>
+
+      <ul>
+        <% todo_list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="todo_list_sub_title">
+    <%= form.label :Titre, style: "display: block" %>
+    <%= form.text_field :title, placeholder: "Ex : Ruby on Rails App" %>
+  </div>
+
+  <div class="todo_list_sub_title">
+    <%= form.label :Description, style: "display: block" %>
+    <%= form.text_area :description, placeholder: "Ex : Apprendre à coder une application web de gestion de To-Do listes avec Rails" %>
+  </div>
+
+  <div class="submit">
+    <%= form.submit "Ajouter" %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<h1>📝 Je m'inscris</h1>
+
+<%= form_for @user do |f|%>
+  <div class="index_row">
+    <%= f.label :username, "Pseudo"%><br>
+    <%= f.text_field :username, placeholder: "Pseudo"%><br>
+  </div>
+
+  <div class="index_row">
+    <%= f.label :password, "Mot de passe"%><br>
+    <%= f.password_field :password, placeholder: "Mot de passe"%><br>
+  </div>
+  <div class="submit">
+    <%= f.submit %>
+  </div>
+<%end%>
+
+<div class="links">
+  <%= link_to "◀️ Retour à l'accueil", welcome_path %>
+</div>

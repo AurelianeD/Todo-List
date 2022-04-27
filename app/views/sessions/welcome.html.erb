@@ -1,0 +1,23 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <p id="notice"><%= msg %></p>
+  </div>
+<% end %>
+
+<div>
+  <h2 class="text-primary">Besoin d'organiser ta journée ?</h2>
+  <h1>TO-DAY</h1>
+  <h2>est fait pour toi ! </h2>
+</div>
+
+<div class="d-flex">
+  <div>
+    <p>Première fois ici ?</p>
+    <%= button_to "Je m'inscris", '/users/new', method: :get%>
+  </div>
+
+  <div>
+    <p>Déjà un compte ?</p>
+    <%= button_to "Je me connecte", '/login', method: :get%>
+  </div>
+</div>
